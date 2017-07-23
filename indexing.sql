@@ -1,8 +1,8 @@
---Create a new postgres user named indexed_cars_user
+-- --Create a new postgres user named indexed_cars_user
 DROP DATABASE IF EXISTS indexed_cars;
 DROP USER IF EXISTS indexed_cars_user;
 
---Create a new database named indexed_cars owned by indexed_cars_user
+-- --Create a new database named indexed_cars owned by indexed_cars_user
 CREATE USER indexed_cars_user;
 CREATE DATABASE indexed_cars;
 
@@ -48,7 +48,7 @@ CREATE DATABASE indexed_cars;
 -- WHERE year = 2010; --Time: 51.104 ms
 
 SELECT DISTINCT make_title FROM car_models
-WHERE make_code = 'LAM'; --Time: 33.717 ms (OG time: 30.669 ms)
+WHERE make_code = 'LAM'; --Time: 33.717 ms (OG time: 45.463 ms)
 
 SELECT DISTINCT model_title FROM car_models
 WHERE make_code = 'NISSAN' AND model_code = 'GT-R'; --Time: 30.406 ms (OG time: 60.088 ms)
